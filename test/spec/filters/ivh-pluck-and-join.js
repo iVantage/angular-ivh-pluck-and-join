@@ -25,4 +25,14 @@ describe('Filter: ivhPluckAndJoin', function() {
     var actual = ivhPluckAndJoinFilter(items, 'name', ' - ');
     expect(actual).toBe('Justin - Bella');
   });
+
+  it('should return an empty string when given null', function() {
+    var actual = ivhPluckAndJoinFilter(null, 'name');
+    expect(actual).toEqual('');
+  });
+
+  it('should return the empty string when given undefined', function() {
+    var actual = ivhPluckAndJoinFilter(undefined, 'name');
+    expect(actual).toBe('');
+  });
 });
