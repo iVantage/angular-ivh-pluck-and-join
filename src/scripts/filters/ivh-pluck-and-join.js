@@ -27,6 +27,11 @@ angular.module('ivh.pluckAndJoin')
     return function(col, prop, delim) {
       col = col || [];
       delim = delim || ', ';
+
+      if('.' === prop) {
+        return col.join(delim);
+      }
+
       return map.call(col, plucker(prop)).join(delim);
     };
   });

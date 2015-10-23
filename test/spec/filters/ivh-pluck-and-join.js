@@ -35,4 +35,9 @@ describe('Filter: ivhPluckAndJoin', function() {
     var actual = ivhPluckAndJoinFilter(undefined, 'name');
     expect(actual).toBe('');
   });
+
+  it('should "pluck" the thing itself when the attribute is "."', function() {
+    var actual = ivhPluckAndJoinFilter(['Justin', 'Bella'], '.');
+    expect(actual).toBe('Justin, Bella');
+  });
 });

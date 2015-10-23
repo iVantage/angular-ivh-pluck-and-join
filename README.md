@@ -32,6 +32,9 @@ You now have access to the `ivhPluckAndJoin` filter:
 Collects `property` from each item in `collection` and returns them joined by
 `delimiter`.
 
+Note that if `collection` is already an array of strings you can use
+`property='.' to perform a simple join.
+
 ### Example
 
 ```html
